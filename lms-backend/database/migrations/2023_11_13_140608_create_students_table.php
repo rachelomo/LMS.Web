@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone_no');
             $table->integer('age')->unsigned();
-            $table->enum('gender', ['male,female']);
+            $table->enum('gender', ['male', 'female'])->nullable();
             $table->timestamp('registered_at')->useCurrent();
             $table->timestamps();
         });
