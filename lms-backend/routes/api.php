@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Api\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get("list-students", [ApiController::class, "listStudents"]);
-Route::get("single-student/{id}", [ApiController::class, "getSingleStudent"]);
-Route::post("add-student", [ApiController::class, "CreateStudent"]);
-Route::put("update-student", [ApiController::class, "UpdateStudent"]);
-Route::delete("delete-student", [ApiController::class, "deleteStudent"]);
